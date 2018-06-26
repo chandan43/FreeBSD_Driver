@@ -1,0 +1,5 @@
+# echo -n "Test Data" > /dev/echo
+# cat /dev/echo
+Opened device "echo" successfully.
+Test Data
+Closing device "echo".

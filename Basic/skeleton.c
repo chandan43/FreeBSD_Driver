@@ -37,8 +37,8 @@ skel_loader(struct module *m, int what, void *arg)
 
 static moduledata_t skel_mod = {
   "skel",
-  skel_loader,
-  NULL
+   skel_loader,
+   NULL
 };
 
 DECLARE_MODULE(skeleton, skel_mod, SI_SUB_KLD, SI_ORDER_ANY);

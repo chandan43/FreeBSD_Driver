@@ -1,0 +1,2 @@
+Running make with this makefile will create a file skeleton.ko that can be loaded into the kernel by typing:
+#kldload -v ./skeleton.k

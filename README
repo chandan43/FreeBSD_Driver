@@ -1,5 +1,24 @@
- Writing FreeBSD Device Drivers
-  
+FreeBSD Installation
+====================
+https://www.freebsd.org/doc/handbook/bsdinstall-start.html
+
+FreeBSD dual boot 
+=================
+After FreeBSD Installation with linux boot with linux.
+Add following lines in /etc/grub.d/40_custom file
+#vim /etc/grub.d/40_custom
+
+menuentry "freebsd" {
+	set root=(hd0,msdos4a)
+	chainloader +1;
+}
+
+Update grub. Restart.
+##grub2-mkconfig -o /boot/grub2/grub.cfg
+
+
+Writing FreeBSD Device Drivers
+=============================  
 Introduction
 -------------
 This chapter provides a brief introduction to writing device drivers for FreeBSD. A device in this context is a term used mostly for hardware-related stuff that belongs to the system, like disks, printers, or a graphics display with its keyboard. A device driver is the software component of the operating system that controls a specific device. There are also so-called pseudo-devices where a device driver emulates the behavior of a device in software without any particular underlying hardware. Device drivers can be compiled into the system statically or loaded on demand through the dynamic kernel linker facility `kld'.
